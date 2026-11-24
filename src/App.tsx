@@ -1,10 +1,10 @@
 import "./App.css";
-import Board from "./components/Board";
+import TaskForm from "./components/Modal";
 
 function App() {
   return (
     <div>
-      <Board />
+      <TaskForm />
     </div>
   );
 }
