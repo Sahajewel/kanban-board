@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, type SubmitEvent } from "react";
 import type { Priority, Task } from "../types";
 
 type TaskFormProps = {
@@ -21,8 +21,9 @@ export default function TaskForm({
   );
   const [error, setError] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: SubmitEvent) => {
     e.preventDefault();
+
     if (!title.trim()) {
       setError("Must be written title");
       return;
